@@ -6,6 +6,8 @@ from datetime import datetime
 
 account=Account()
 account.deposit(500)
+account.withdraw(40)
+print(account.get_balance())
 
-def test_account_deposit():
-    assert account.get_balance== 500
+def test_account_withdraw():
+    assert account.get_balance== 460
