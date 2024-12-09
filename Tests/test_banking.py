@@ -1,9 +1,11 @@
+import pytest
 from banking import Account
 from banking import Transaction
 import datetime as dt
 from datetime import datetime
 
-transaction= Transaction(150)
+account=Account()
+account.deposit(500)
 
-def test_transaction_no_timestamp():
-    assert Transaction.timestamp== 2024-12-09
+def test_account_deposit():
+    assert account.get_balance== 500
